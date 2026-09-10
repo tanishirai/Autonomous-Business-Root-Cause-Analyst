@@ -1,0 +1,18 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# Data (Keep local, do not push large CSVs to GitHub)
+data/raw/
+data/processed/
+
+# OS
+.DS_Store
+Thumbs.db
