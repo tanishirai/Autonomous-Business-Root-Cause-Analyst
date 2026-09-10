@@ -1,47 +1,20 @@
-# Data processing and analysis
-pandas==2.2.0
-numpy==1.26.3
-scipy==1.12.0
+# Data processing and analysis (Relaxed versions for Linux deployment)
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
 
 # Data visualization
-matplotlib==3.8.2
-seaborn==0.13.1
-plotly==5.18.0
-
-# Jupyter notebooks
-jupyter==1.0.0
-ipykernel==6.29.0
-
-# Database
-sqlalchemy==2.0.25
-pymysql==1.1.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
 
 # API and backend
-fastapi==0.109.0
-uvicorn==0.27.0
-pydantic==2.5.3
-python-dotenv==1.0.0
+fastapi>=0.109.0
+uvicorn>=0.27.0
+pydantic>=2.5.0
+python-dotenv>=1.0.0
 
-# HTTP requests
-requests==2.31.0
-aiohttp==3.9.1
+# LLM Integration
+google-generativeai>=0.7.0
 
 # Utilities
-tqdm==4.66.1
-python-dateutil==2.8.2
-
-# Testing
-pytest==7.4.4
-pytest-asyncio==0.23.3
-
-# Code quality
-black==24.1.0
-flake8==7.0.0
-
-# Backend and API
-fastapi==0.109.0
-uvicorn==0.27.0
-pydantic==2.5.3
-
-# LLM Integration (Gemini)
-google-generativeai==0.7.2
+requests>=2.31.0
