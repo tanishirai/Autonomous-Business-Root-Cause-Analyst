@@ -32,7 +32,7 @@ function App() {
     }, 800);
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/investigate', {
+      const response = await fetch('https://autonomous-business-root-cause-analyst.onrender.com/investigate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question }),
