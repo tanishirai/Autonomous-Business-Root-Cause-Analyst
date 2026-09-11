@@ -5,7 +5,7 @@
 An AI-powered analytics investigation system that automatically investigates business problems, identifies likely root causes using data, provides quantitative evidence, and recommends actionable business strategies.
 
 ## 🚀 Live Demo
-- **Frontend Application:** [https://autonomous-business-root-cause-analyst.vercel.app](https://autonomous-business-root-cause-analyst.vercel.app) *(Try asking: "Why is delivery time so high in Semi-Urban areas?")*
+- **Frontend Application:** [https://autonomous-business-root-cause-anal.vercel.app/](https://autonomous-business-root-cause-anal.vercel.app/) *(Try asking: "Why is delivery time so high in Semi-Urban areas?")*
 - **Backend API Docs:** [https://autonomous-business-root-cause-analyst.onrender.com/docs](https://autonomous-business-root-cause-analyst.onrender.com/docs)
 - **Power BI Dashboard:** Download the `.pbix` file from the `powerbi/` directory and open it in Power BI Desktop to explore the interactive Star Schema, DAX measures, and Decomposition Tree.
 
