@@ -20,10 +20,10 @@ Traditional dashboards answer questions like *"What was the average delivery tim
 This project is **not a generic Text-to-SQL chatbot**. It is an **Autonomous Analytics Investigator**. When given a business question, the system:
 1. **Understands** the business intent and maps it to defined metrics.
 2. **Generates** multiple testable hypotheses based on available data dimensions.
-3. **Executes** controlled Python analytics tools to gather quantitative evidence.
-4. **Tests** alternative explanations to avoid false causal claims.
-5. **Ranks** root causes by evidence strength and sample size.
-6. **Recommends** actionable business strategies while explicitly stating data limitations.
+3. **Leverages Python analytics context** to ground its responses in actual quantitative evidence.
+4. **Tests alternative explanations** to avoid false causal claims.
+5. **Ranks root causes** by evidence strength and sample size.
+6. **Recommends actionable business strategies** while explicitly stating data limitations.
 
 ---
 
@@ -53,7 +53,7 @@ This project is built on a modern, layered data and AI architecture designed for
         ┌──────────┐  ┌────────────┐  ┌─────────────┐
         │ Gemini   │  │ Python     │  │ Power BI    │
         │ LLM      │  │ Analytics  │  │ Semantic    │
-        │ (Tools)  │  │ Tools      │  │ Model       │
+        │ (Context)│  │ Context    │  │ Model       │
         └────┬─────┘  └─────┬──────┘  └─────────────┘
              │              │
              └──────┬───────┘
@@ -63,19 +63,17 @@ This project is built on a modern, layered data and AI architecture designed for
              └──────────────┘
 
 ```
---
+---
 
 ## 🌟 Key Differentiators
+- Unlike generic AI SQL generators, this system:
+- Generates Hypotheses: It doesn't just query; it forms testable business hypotheses before looking at the data.
+- Provides an Evidence Ledger: Every claim is backed by a quantitative value, sample size, and confidence level (High/Medium/Low).
+- Acknowledges Limitations: It explicitly states what the observational data cannot prove, preventing AI hallucinations and false causal claims.
+- Recommends Actions: It translates data findings into actionable, prioritized business strategies.
+- Separation of Concerns: The LLM orchestrates the logic and formats the business response, while Python handles the underlying data processing, ensuring high analytical accuracy.
 
-Unlike generic AI SQL generators, this system:
-
-- **Generates Hypotheses:** It doesn't just query; it forms testable business hypotheses before looking at the data.
-- **Provides an Evidence Ledger:** Every claim is backed by a quantitative value, sample size, and confidence level (High/Medium/Low).
-- **Acknowledges Limitations:** It explicitly states what the observational data cannot prove, preventing AI hallucinations and false causal claims.
-- **Recommends Actions:** It translates data findings into actionable, prioritized business strategies.
-- **Separation of Concerns:** The LLM orchestrates the logic, but Python performs the actual math, ensuring 100% analytical accuracy.
-
---
+---
 
 ## 🛠️ Tech Stack
 
@@ -86,7 +84,7 @@ Unlike generic AI SQL generators, this system:
 - **Frontend:** React, Vite, Tailwind CSS, Lucide Icons
 - **Deployment:** Vercel (Frontend), Render (Backend)
 
---
+---
 
 ## 📂 Project Structure
 
@@ -137,6 +135,7 @@ autonomous-business-root-cause-analyst/
 └── scripts/
     └── download_dataset.py       # Automated dataset acquisition script
 ```
+---
 
 ## 🚀 How to Run Locally
 
@@ -208,11 +207,11 @@ Deep dives into the analytical methodology:
 
 ---
 
-## 🔮 Future Improvements
+## 🔮 Future Roadmap (Planned V2 Upgrades)
 
-- **True Agentic Loop:** Implement iterative tool-calling where the LLM dynamically decides to run deeper segmentation if initial evidence confidence is "Low".
+- **True Agentic Loop:** Implement iterative tool-calling where the LLM dynamically executes Python functions and decides to run deeper segmentation if initial evidence confidence is "Low".
 - **RAG Integration:** Add Retrieval-Augmented Generation to ingest internal company SOPs, allowing the AI to align recommendations with specific business policies.
-- **Advanced Causal Inference:** Integrate Python libraries like `DoWhy` or `EconML` to move from association-based evidence to true causal impact estimation.
+- **Advanced Causal Inference:** Integrate Python libraries like DoWhy or EconML to move from association-based evidence to true causal impact estimation.
 - **CI/CD Pipeline:** Add GitHub Actions for automated testing of the analytics modules and Pydantic schema validation on every PR.
 
 ---
